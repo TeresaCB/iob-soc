@@ -12,7 +12,6 @@ int main()
   //char *a = malloc(10);
   //free(a);
   
-  
   unsigned long long int fib[100] = {0};
   
   /*fib = (int*)malloc(100*sizeof(int));
@@ -21,19 +20,16 @@ int main()
         exit(0); 
   } */
 
-  
   fib[0]=0;
   fib[1]=1;
   
+  uart_printf("\n\n Fibonnaci element 0 : %d \n", fib[0]);
+  uart_printf("\n\n Fibonnaci element 0 : %d \n", fib[1]);
+  
   for(int i=2; i<100; i++){
   	fib[i] = fib[i-1]+fib[i-2]; 
+  	uart_printf("\n\n Fibonnaci element %d : %d \n", i, fib[i]);
   }
-  
-  for(int j = 0; j < 100; j++){
-    uart_printf("\n\n Fibonnaci element %d : %d \n", j, fib[j]);
-  }
-  
-  
   
   //free(fib);
   
