@@ -23,13 +23,12 @@ int main()
   fib[0]=0;
   fib[1]=1;
   
-  uart_printf("\n\n Fibonnaci element 0 : %d \n", fib[0]);
-  uart_printf("\n\n Fibonnaci element 0 : %d \n", fib[1]);
-  
-  for(int i=2; i<100; i++){
+  for(int i=2; i<100; i++)
   	fib[i] = fib[i-1]+fib[i-2]; 
-  	uart_printf("\n\n Fibonnaci element %d : %d \n", i, fib[i]);
-  }
+  
+  
+  for(int j=0; j<100; j++)
+  	uart_printf("\n\n Fibonnaci element %d : %d \n", j, fib[j]);
   
   //free(fib);
   
